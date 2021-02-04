@@ -3,11 +3,11 @@ TED is a simple CLI Text EDitor made in pure Lua
 
 Useful for quick and easy automation.
 
-#Build instructions
+Build instructions
 -----
 After downloading the file run or alias (Lua/luajit) (path to file) (arguments)
 
-#Usage
+Usage
 -----
 ted (-h/-r/-w) [file (needed always except on -h)] [string to add if -w] [more strings or //n] ...
 

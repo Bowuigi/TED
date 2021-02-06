@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+## TED
 
-You can use the [editor on GitHub](https://github.com/Bowuigi/TED/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+The Text EDitor for quick and easy automation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**TED** is a CLI text editor made in Pure Lua that is useful for automating tasks that require text editing
 
-### Markdown
+#Features
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Read files
+- Append to files
+- Replace *patterns* (Compatible with Lua's gsub) on files
+- Infinite argument support
+- Compatible with cowsay, lolcat and similar
 
-```markdown
-Syntax highlighted code block
+#Run
 
-# Header 1
-## Header 2
-### Header 3
+To run TED, you need two things:
+1. A CLI (Terminal) or similar
+2. Lua (5.1+) or LuaJIT
 
-- Bulleted
-- List
+To run it, type: 
+```bash
 
-1. Numbered
-2. List
+lua/luajit [path to ted.lua] [arguments]
+```
+You can also make an alias for .bashrc or similar by typing (assuming you use luajit and bash and ted.lua is located on /home/):
+```bash
 
-**Bold** and _Italic_ and `Code` text
+alias ted="luajit ~/ted.lua"
 
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#Usage (assuming it is already aliased)
 
-### Jekyll Themes
+```bash
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Bowuigi/TED/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+ted ((-h/-?/--help)(-a/--append)(-r/-read)(-R/--replace)) [filename (required if mode is not help)] [strings to add if mode is append or pattern to match if mode is replace] [string to replace with (if mode is replace)] [//n for whitespaces (if needed)]
+```

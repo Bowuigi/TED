@@ -27,7 +27,8 @@ You can also make an alias for .bashrc or similar by typing (assuming you use lu
 alias ted="luajit ~/ted.lua"
 ```
 
-#Usage (assuming it is already aliased)
+Usage (assuming it is already aliased)
+---
 
 ```bash
 ted ((-h/-?/--help)(-a/--append)(-r/-read)(-R/--replace)) [filename (required if mode is not help)] [strings to add if mode is append or pattern to match if mode is replace] [string to replace with (if mode is replace)] [//n for whitespaces (if needed)]

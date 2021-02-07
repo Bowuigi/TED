@@ -71,7 +71,9 @@ If we read the file like we did before we will see that the content is now "hell
 
 Moving letters in each word
 
+```bash
 ted -R example.txt "([^%s])([^%s]*)" "%2%1"
+```
 
 Reading the file, the content is now "ell0h 0rldw"
 
@@ -79,7 +81,9 @@ Replacing every word to whatever you want
 
 For this one i will make a separate file named "word.txt" that contains: "hello, how are you?"
 
+```bash
 ted -R word.txt "[^%s]+" word
+```
 
 Reading the file, the content is "word, word word word?"
 
